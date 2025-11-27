@@ -1,0 +1,59 @@
+name: CD - Docker Build & Push (Statique)
+
+on:
+  push:
+    branches: ["main"] # Déclencher directement sur push vers main
+
+jobs:
+  docker-build-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔑 Login to GHCR
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐳 Build Docker image
+        # Utilise le nouveau nom d'image
+        run: docker build -t ghcr.io/ryandevgithub/site-vitrine-web-catalyste:latest .
+
+      - name: 📤 Push Docker image
+        run: docker push ghcr.io/ryandevgithub/site-vitrine-web-catalyste:latest
+
+  deploy:
+    name: "🚀 Deploy to VPS"
+    runs-on: ubuntu-latest
+    needs: docker-build-push
+
+    steps:
+      - name: 🚀 Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            CONTAINER_NAME="site-vitrine-web-catalyste"
+            IMAGE_NAME="ghcr.io/ryandevgithub/$CONTAINER_NAME:latest"
+
+            # ⚡ Stop & remove ancien conteneur s'il existe
+            docker stop $CONTAINER_NAME || true
+            docker rm $CONTAINER_NAME || true
+
+            # ⬇️ Pull la dernière image depuis GHCR
+            docker pull $IMAGE_NAME
+
+            # 🚀 Run nouveau conteneur en prod (suppression du --env-file)
+            docker run -d \
+              --name $CONTAINER_NAME \
+              --restart unless-stopped \
+              -p 8084:80 \
+              $IMAGE_NAME
+
+            # 📄 Vérifie que le conteneur est bien lancé
+            docker ps -f name=$CONTAINER_NAME
