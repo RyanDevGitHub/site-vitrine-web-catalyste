@@ -1,0 +1,178 @@
+/* Container global */
+.feature-container {
+  width: 100%;
+  height: 480px;
+  position: relative;
+}
+
+.feature-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+/* TITRES */
+.title-container {
+  width: 56%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.title-container h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 60px;
+}
+
+.title-container p {
+  font-size: 18px;
+  color: #111827;
+  line-height: 28px;
+}
+
+/* LISTE DE PROBLÈMES */
+.problems {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* CARTES */
+.problem-card {
+  width: 384px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ICONES — recréation des blocs colorés */
+.icon {
+  width: 32px;
+  height: 32px;
+  position: relative;
+      background: #9400d375;
+}
+
+/* Icon 1 */
+.icon-1::before,
+.icon-1::after,
+.icon-1 div {
+  content: "";
+  position: absolute;
+}
+
+.icon-1::before {
+  width: 9.33px;
+  height: 32px;
+  left: 0;
+  background: #7c3aed;
+}
+
+.icon-1::after {
+  width: 9.33px;
+  height: 32px;
+  left: 12px;
+  background: #1db5be;
+}
+
+.icon-1 div {
+  width: 8px;
+  height: 16px;
+  left: 24px;
+  top: 8px;
+  background: #c4b5fd;
+}
+
+/* Icon 2 */
+.icon-2::before,
+.icon-2::after,
+.icon-2 div {
+  content: "";
+  position: absolute;
+}
+
+.icon-2::before {
+  width: 29.33px;
+  height: 8px;
+  top: 1.33px;
+  left: 1.33px;
+  background: #7c3aed;
+}
+
+.icon-2::after {
+  width: 29.33px;
+  height: 8px;
+  top: 12px;
+  left: 1.33px;
+  background: #1db5be;
+}
+
+.icon-2 div {
+  width: 29.33px;
+  height: 8px;
+  top: 22.67px;
+  left: 1.33px;
+  background: #c4b5fd;
+}
+
+/* Icon 3 */
+.icon-3::before,
+.icon-3::after,
+.icon-3 div {
+  content: "";
+  position: absolute;
+}
+
+.icon-3::before {
+  width: 29.33px;
+  height: 6.67px;
+  top: 1.33px;
+  left: 1.33px;
+  background: #1db5be;
+}
+
+.icon-3::after {
+  width: 8px;
+  height: 20px;
+  top: 10.67px;
+  left: 1.33px;
+  background: #c4b5fd;
+}
+
+.icon-3 div {
+  width: 18.67px;
+  height: 20px;
+  top: 10.67px;
+  left: 12px;
+  background: #7c3aed;
+}
+
+/* TEXTES DES CARTES */
+.problem-text {
+  padding: 0 16px;
+  text-align: center;
+}
+
+.problem-text h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 40px;
+}
+
+.problem-text p {
+  font-size: 16px;
+  color: #374151;
+  line-height: 24px;
+}

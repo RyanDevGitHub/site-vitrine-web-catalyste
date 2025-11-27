@@ -1,0 +1,41 @@
+.flipgrid-selector button:disabled {
+  background-color: var(--color-surface25);
+  cursor: not-allowed;
+}
+
+.flipgrid-selector button:disabled:hover {
+  border-color: var(--color-surface75);
+  color: var(--color-surface75);
+}
+
+.flipgrid-wrapper {
+  width: 100%;
+  padding: 50px;
+}
+
+.flipgrid-gallery-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flipgrid-gallery-item {
+  flex-basis: 25%;
+  height: 400px;
+  padding: 10px;
+}
+
+.flipgrid-gallery-container.small .flipgrid-gallery-item {
+  flex-basis: 16.66667%;
+}
+
+.flipgrid-image-container {
+  height: 90%;
+}
+
+.flipgrid-image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

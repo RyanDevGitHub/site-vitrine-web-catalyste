@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titre de votre site</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nav-bar.css" />
+    <link rel="stylesheet" href="main-content-hero.css" />
+    <link rel="stylesheet" href="background-img.css" />
+    <link rel="stylesheet" href="features.css" />
+    <link rel="stylesheet" href="demarche-ingenieure.css" />
+    <link rel="stylesheet" href="outils.css" />
+    <link rel="stylesheet" href="coiffeur-qui-nous-font-confiance.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body style="width: 100%; height: 100%">
+    <main>
+      <section class="hero-section">
+        <div
+          data-breakpoint="Desktop"
+          style="
+            width: 100%;
+            height: 866px;
+            position: relative;
+            background: white;
+            overflow: hidden;
+          "
+        >
+          <div class="background-img">
+            <div class="circle circle-purple"></div>
+            <div class="circle circle-blue"></div>
+            <div class="overlay-blur"></div>
+            <div class="shape shape-a"></div>
+            <div class="shape shape-b"></div>
+            <div class="shape shape-c"></div>
+            <div class="shape shape-d"></div>
+            <div class="shape shape-e"></div>
+          </div>
+
+          <div class="main-content">
+            <div class="text-section">
+              <div class="text-block">
+                <div class="heading">
+                  Trois ingénieurs du val d’oise construisent, avec vous,
+                  l’outil qui simplifie votre activité.
+                </div>
+                <div class="subheading">
+                  Nous aidons les coiffeurs de Cergy-Pontoise à améliorer leur
+                  rendement, valoriser leur métier et reprendre le contrôle sur
+                  leur activité.
+                </div>
+              </div>
+              <div class="cta-section">
+                <a href="#">
+                  <div class="cta-button">En savoir plus</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="phone-section">
+              <div class="iphone-x">
+                <img
+                  class="screen"
+                  src="https://placehold.co/279x604"
+                  alt="Screen"
+                />
+                <img
+                  class="frame"
+                  src="https://placehold.co/320x640"
+                  alt="iPhone frame"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-bar-container">
+            <div class="nav-bar">
+              <div class="nav-menu">
+                <div class="logo">
+                  <div class="logo-icon">
+                    <div class="logo-color color1"></div>
+                    <div class="logo-color color2"></div>
+                    <div class="logo-color color3"></div>
+                    <div class="logo-color color4"></div>
+                  </div>
+                  <div class="logo-text">WebCatalyste</div>
+                </div>
+                <div class="nav-links">
+                  <div class="nav-item">
+                    <a  href="#section-problemes"></a> <button>Problèmes qu’on résout</button></a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#section-demarche"> <button>Notre démarche d’ingénieurs</button></a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#section-construction"> <button>Ce qu’on construit</button></a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#section-confiance"> <button>Ce qui nous font confiance</button></a>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-app">
+                <a
+                  href="https://www.kobinet.com.tr/"
+                  target="_blank"
+                  class="market-btn google-btn"
+                  role="button"
+                >
+                  <span class="market-button-subtitle">Download on the</span>
+                  <span class="market-button-title">Google Play</span>
+                </a>
+
+                <a
+                  href="https://www.kobinet.com.tr/"
+                  target="_blank"
+                  class="market-btn apple-btn"
+                  role="button"
+                >
+                  <span class="market-button-subtitle">Download on the</span>
+                  <span class="market-button-title">App Store</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-summary-section" id="section-problemes">
+        <div class="feature-container">
+          <div class="feature-content">
+            <div class="title-container">
+              <h2>Problèmes qu’on résout</h2>
+              <p>Ce que les salons du 95 nous ont confié</p>
+            </div>
+
+            <div class="problems">
+              <!-- Carte 1 -->
+              <div class="problem-card">
+                <div class="icon icon-1"></div>
+                <div class="problem-text">
+                  <h3>Ego</h3>
+                  <p>Manque de valorisation et reconnaissance</p>
+                </div>
+              </div>
+
+              <!-- Carte 2 -->
+              <div class="problem-card">
+                <div class="icon icon-2"></div>
+                <div class="problem-text">
+                  <h3>Rendement</h3>
+                  <p>Difficulté à optimiser le planning et le temps</p>
+                </div>
+              </div>
+
+              <!-- Carte 3 -->
+              <div class="problem-card">
+                <div class="icon icon-3"></div>
+                <div class="problem-text">
+                  <h3>Mise en valeur</h3>
+                  <p>Pas toujours l’image qu’ils méritent en ligne</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="value-proposition-section" id="section-demarche">
+        <div class="title-container">
+          <h2>Notre démarche d’ingénieurs</h2>
+          <p>Pas une équipe commerciale. Des ingénieurs qui co-construisent.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-object complete">
+            <div class="timeline-status"></div>
+            <div class="timeline-content">
+              <h3>Début de la formation</h3>
+              <span>19.06.2020</span>
+            </div>
+          </div>
+
+          <div class="timeline-object complete">
+            <div class="timeline-status"></div>
+            <div class="timeline-content">
+              <h3>Projet final</h3>
+              <span>05.07.2020</span>
+            </div>
+          </div>
+
+          <div class="timeline-object">
+            <div class="timeline-status"></div>
+            <div class="timeline-content">
+              <h3>Remise de diplômes</h3>
+              <span>17.09.2020</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="outils-section" id="section-construction">
+        <div class="outils-content">
+          <!-- TITRE -->
+          <div class="title-container">
+            <h2>Un outil conçu autour de vos problèmes — et non l’inverse.</h2>
+            <p>Ce que les salons du 95 nous ont confié</p>
+          </div>
+
+          <!-- CARTES -->
+          <div class="cards-container">
+            <!-- Carte 1 -->
+            <div class="card">
+              <div class="icon icon-1"></div>
+              <div class="card-text">
+                <h3>Résolution de souffrances identifiées</h3>
+                <p>
+                  Lorem ipsum dolor amet, consectetur adipiscing elit. Mattis et
+                  sed nam sem tellus erat.
+                </p>
+              </div>
+              <div class="card-link">
+                <span>Explore</span>
+                <div class="arrow-right">
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="card">
+              <div class="icon icon-2"></div>
+              <div class="card-text">
+                <h3>Tests rapides avec les activité</h3>
+                <p>
+                  Lorem ipsum dolor amet, consectetur adipiscing elit. Mattis et
+                  sed nam sem tellus erat.
+                </p>
+              </div>
+              <div class="card-link">
+                <span>Explore</span>
+                <div class="arrow-right">
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="card card3">
+              <div class="icon icon-3"></div>
+              <div class="card-text">
+                <h3>Compréhension du métier</h3>
+                <p>
+                  Lorem ipsum dolor amet, consectetur adipiscing elit. Mattis et
+                  sed nam sem tellus erat.
+                </p>
+              </div>
+              <div class="card-link">
+                <span>Explore</span>
+                <div class="arrow-right">
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="les-coiffeur-section" id="section-confiance">
+        <div class="title-container">
+          <h2>Un outil conçu autour de vos problèmes — et non l’inverse.</h2>
+          <p>Ce que les salons du 95 nous ont confié</p>
+        </div>
+        <!-- 
+        <div class="flipgrid-selector">
+          <button id="flipgrid-btnS">Small</button>
+          <button id="flipgrid-btnL" disabled>Large</button>
+        </div> -->
+
+        <div class="flipgrid-wrapper">
+          <div class="flipgrid-gallery-container">
+            <div class="flipgrid-gallery-item">
+              <div class="flipgrid-image-container">
+                <img
+                  src="https://assets.codepen.io/16327/portrait-image-1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <!-- copie toutes les autres images en gardant les mêmes classes -->
+            <div class="flipgrid-gallery-item">
+              <div class="flipgrid-image-container">
+                <img
+                  src="https://assets.codepen.io/16327/portrait-image-2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <!-- ... etc ... -->
+            <div class="flipgrid-gallery-item">
+              <div class="flipgrid-image-container">
+                <img
+                  src="https://assets.codepen.io/16327/portrait-image-2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="flipgrid-gallery-item">
+              <div class="flipgrid-image-container">
+                <img
+                  src="https://assets.codepen.io/16327/portrait-image-2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="flipgrid-gallery-item">
+              <div class="flipgrid-image-container">
+                <img
+                  src="https://assets.codepen.io/16327/portrait-image-2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="flipgrid-gallery-item">
+              <div class="flipgrid-image-container">
+                <img
+                  src="https://assets.codepen.io/16327/portrait-image-2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="flipgrid-gallery-item">
+              <div class="flipgrid-image-container">
+                <img
+                  src="https://assets.codepen.io/16327/portrait-image-2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div
+        data-breakpoint="Desktop"
+        style="
+          width: 100%;
+          padding-left: 112px;
+          padding-right: 112px;
+          padding-top: 64px;
+          padding-bottom: 64px;
+          background: black;
+          justify-content: space-between;
+          align-items: flex-start;
+          display: inline-flex;
+        "
+      >
+        <div
+          style="
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 24px;
+            display: inline-flex;
+          "
+        >
+          <div
+            data-color="Default"
+            style="width: 32px; height: 32px; position: relative"
+          >
+            <div
+              style="
+                width: 32px;
+                height: 32px;
+                left: 0px;
+                top: 0px;
+                position: absolute;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  width: 20.16px;
+                  height: 9.32px;
+                  left: 0.66px;
+                  top: 22.69px;
+                  position: absolute;
+                  background: #f22bb2;
+                "
+              ></div>
+              <div
+                style="
+                  width: 9.32px;
+                  height: 23.01px;
+                  left: 1.14px;
+                  top: 0px;
+                  position: absolute;
+                  background: #8c30f5;
+                "
+              ></div>
+              <div
+                style="
+                  width: 20.16px;
+                  height: 9.32px;
+                  left: 11.18px;
+                  top: 0px;
+                  position: absolute;
+                  background: #fe9a22;
+                "
+              ></div>
+              <div
+                style="
+                  width: 9.32px;
+                  height: 23.01px;
+                  left: 22.03px;
+                  top: 8.44px;
+                  position: absolute;
+                  background: #2ec5ce;
+                "
+              ></div>
+            </div>
+          </div>
+          <div
+            style="
+              overflow: hidden;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              gap: 12px;
+              display: flex;
+            "
+          >
+            <div
+              style="
+                overflow: hidden;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 24px;
+                display: inline-flex;
+              "
+            >
+              <div
+                style="
+                  color: white;
+                  font-size: 16px;
+                  font-family: Inter;
+                  font-weight: 400;
+                  line-height: 24px;
+                  word-wrap: break-word;
+                "
+              >
+                Download Now
+              </div>
+              <div
+                style="
+                  color: white;
+                  font-size: 16px;
+                  font-family: Inter;
+                  font-weight: 400;
+                  line-height: 24px;
+                  word-wrap: break-word;
+                "
+              >
+                License
+              </div>
+            </div>
+            <div
+              style="
+                overflow: hidden;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 24px;
+                display: inline-flex;
+              "
+            >
+              <div
+                style="
+                  color: white;
+                  font-size: 16px;
+                  font-family: Inter;
+                  font-weight: 400;
+                  line-height: 24px;
+                  word-wrap: break-word;
+                "
+              >
+                About
+              </div>
+              <div
+                style="
+                  color: white;
+                  font-size: 16px;
+                  font-family: Inter;
+                  font-weight: 400;
+                  line-height: 24px;
+                  word-wrap: break-word;
+                "
+              >
+                Features
+              </div>
+              <div
+                style="
+                  color: white;
+                  font-size: 16px;
+                  font-family: Inter;
+                  font-weight: 400;
+                  line-height: 24px;
+                  word-wrap: break-word;
+                "
+              >
+                Pricing
+              </div>
+              <div
+                style="
+                  color: white;
+                  font-size: 16px;
+                  font-family: Inter;
+                  font-weight: 400;
+                  line-height: 24px;
+                  word-wrap: break-word;
+                "
+              >
+                Careers
+              </div>
+              <div
+                style="
+                  color: white;
+                  font-size: 16px;
+                  font-family: Inter;
+                  font-weight: 400;
+                  line-height: 24px;
+                  word-wrap: break-word;
+                "
+              >
+                Help
+              </div>
+              <div
+                style="
+                  color: white;
+                  font-size: 16px;
+                  font-family: Inter;
+                  font-weight: 400;
+                  line-height: 24px;
+                  word-wrap: break-word;
+                "
+              >
+                Privacy Policy
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              color: #d1d5db;
+              font-size: 14px;
+              font-family: Inter;
+              font-weight: 400;
+              line-height: 20px;
+              word-wrap: break-word;
+            "
+          >
+            © 2021 Landify UI Kit. All rights reserved
+          </div>
+        </div>
+        <div
+          style="
+            width: 176px;
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 16px;
+            display: inline-flex;
+          "
+        >
+          <div
+            style="
+              align-self: stretch;
+              color: #d1d5db;
+              font-size: 18px;
+              font-family: Inter;
+              font-weight: 500;
+              line-height: 28px;
+              word-wrap: break-word;
+            "
+          >
+            Get the App
+          </div>
+          <a
+            href="https://www.kobinet.com.tr/"
+            target="_blank"
+            class="market-btn google-btn"
+            role="button"
+          >
+            <span class="market-button-subtitle">Download on the</span>
+            <span class="market-button-title">Google Play</span>
+          </a>
+          <!-- Google Play Button -->
+          <a
+            href="https://www.kobinet.com.tr/"
+            target="_blank"
+            class="market-btn apple-btn"
+            role="button"
+          >
+            <span class="market-button-subtitle">Download on the</span>
+            <span class="market-button-title">App Store</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
