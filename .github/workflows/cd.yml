@@ -7,6 +7,9 @@ on:
 jobs:
   docker-build-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read # Lecture du code source
+      packages: write #
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
