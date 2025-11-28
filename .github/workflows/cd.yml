@@ -40,31 +40,26 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          # Dans le Job 'deploy' de votre workflow CD du site statique
-script: |
-  CONTAINER_NAME="site-vitrine-web-catalyste"
-  IMAGE_NAME="ghcr.io/ryandevgithub/$CONTAINER_NAME:latest"
+          script: |
+            CONTAINER_NAME="site-vitrine-web-catalyste"
+            IMAGE_NAME="ghcr.io/ryandevgithub/$CONTAINER_NAME:latest"
+             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin 
+             
+               docker stop $CONTAINER_NAME || true
+               docker rm $CONTAINER_NAME || true
+               
+               # 3. Pull la dernière image (Ceci ne sera plus denied !)
+               docker pull $IMAGE_NAME
+               
+               # 4. Run nouveau conteneur
+               docker run -d \
+                 --name $CONTAINER_NAME \
+                 --restart unless-stopped \
+                 -p 8084:80 \
+                 $IMAGE_NAME
+               
+               # 5. BONNE PRATIQUE : Déconnexion après usage (Sécurité)
+               docker logout ghcr.io
 
-  # 1. BONNE PRATIQUE : AUTHENTIFICATION GHCR SUR LE VPS
-  # Utilise le GITHUB_TOKEN généré par l'action pour le mot de passe
-  echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-
-  # 2. Arrêt et suppression (ignorer l'erreur si le conteneur n'existe pas)
-  docker stop $CONTAINER_NAME || true
-  docker rm $CONTAINER_NAME || true
-
-  # 3. Pull la dernière image (Ceci ne sera plus denied !)
-  docker pull $IMAGE_NAME
-
-  # 4. Run nouveau conteneur
-  docker run -d \
-    --name $CONTAINER_NAME \
-    --restart unless-stopped \
-    -p 8084:80 \
-    $IMAGE_NAME
-
-  # 5. BONNE PRATIQUE : Déconnexion après usage (Sécurité)
-  docker logout ghcr.io
-
-  # 6. Vérifie que le conteneur est bien lancé
-  docker ps -f name=$CONTAINER_NAME
+               # 6. Vérifie que le conteneur est bien lancé
+               docker ps -f name=$CONTAINER_NAME
