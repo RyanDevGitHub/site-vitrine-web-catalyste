@@ -1,3 +1,4 @@
+
 const hamburger = document.querySelector('.hamburger-menu');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-menu a'); const body = document.body;
@@ -5,7 +6,7 @@ const navLinks = document.querySelectorAll('.nav-menu a'); const body = document
 // Fonction pour basculer la classe 'active'
 function toggleMenu() {
   navMenu.classList.toggle('active');
-  body.classList.toggle(' ');
+  body.classList.toggle('no-scroll');
   // Change l'icône du hamburger en croix (X)
   hamburger.innerHTML = navMenu.classList.contains('active') ? '&#10005;' : '&#9776;';
 }
