@@ -176,3 +176,40 @@
   color: #374151;
   line-height: 24px;
 }
+/* --- Styles pour Tablette (moins de 1200px) --- */
+@media (max-width: 1200px) {
+    .problems {
+        flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+        justify-content: center;
+    }
+    .problem-card {
+        width: 45%; /* Deux cartes par ligne sur tablette */
+        margin-bottom: 20px;
+    }
+    .title-container {
+        width: 80%; /* Le titre prend plus de place sur l'écran */
+    }
+}
+
+
+/* --- Styles pour Téléphone (moins de 600px) --- */
+@media (max-width: 600px) {
+    .feature-content {
+        padding: 30px 10px; /* Réduire le padding général */
+    }
+    .title-container h2 {
+        font-size: 32px; /* Réduire la taille du titre */
+        line-height: 40px;
+    }
+    .title-container p {
+        font-size: 16px;
+    }
+
+    .problems {
+        flex-direction: column; /* Les cartes s'empilent */
+        gap: 20px;
+    }
+    .problem-card {
+        width: 90%; /* Chaque carte prend presque toute la largeur */
+    }
+}

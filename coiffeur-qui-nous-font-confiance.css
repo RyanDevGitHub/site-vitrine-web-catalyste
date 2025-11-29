@@ -39,3 +39,36 @@
   width: 100%;
   object-fit: cover;
 }
+/* --- Styles pour Tablette (moins de 1200px) --- */
+@media (max-width: 1200px) {
+    .flipgrid-wrapper {
+        padding: 20px; /* Réduire le padding */
+    }
+
+    /* Passer à 3 colonnes */
+    .flipgrid-gallery-item {
+        flex-basis: 33.3333%;
+        height: 300px;
+    }
+
+    /* Adapter la petite taille (small) à 4 colonnes */
+    .flipgrid-gallery-container.small .flipgrid-gallery-item {
+        flex-basis: 25%;
+    }
+}
+
+
+/* --- Styles pour Téléphone (moins de 600px) --- */
+@media (max-width: 600px) {
+    /* Passer à 2 colonnes */
+    .flipgrid-gallery-item {
+        flex-basis: 50%;
+        height: 200px; /* Réduire la hauteur des images */
+        padding: 5px;
+    }
+
+    /* Adapter la petite taille (small) à 3 colonnes */
+    .flipgrid-gallery-container.small .flipgrid-gallery-item {
+        flex-basis: 33.3333%;
+    }
+}

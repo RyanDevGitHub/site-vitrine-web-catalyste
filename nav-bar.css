@@ -1,101 +1,463 @@
-/* Container nav-bar */
-.nav-bar-container {
-  position: relative;
-  width: 100%;
-  height: 80px; /* Hauteur de la navbar */
-}
+body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #111827;
+        }
 
-/* Navbar principale */
-.nav-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between; /* menu à gauche, boutons à droite */
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-  background-color: #fff; /* Couleur de fond, à changer si besoin */
-}
+        /* Styles de la Section Hero */
+        .hero-section {
+            width: 100%;
+            /* Enlever la hauteur fixe pour permettre au contenu de s'adapter */
+            min-height: 80vh; 
+            position: relative;
+            background: #fff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* Menu de navigation */
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
+        /* Styles de l'arrière-plan (Background Imagery) */
+        .background-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
 
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px); /* Ajout d'un flou pour un effet moderne */
+            opacity: 0.6;
+        }
+        
+        /* Ajustement des couleurs et tailles des cercles pour l'effet */
+        .circle-purple {
+            width: 400px;
+            height: 400px;
+            top: 5%;
+            right: 0%;
+            background: #8c30f5; /* Couleur 2 */
+        }
+        
+        .circle-blue {
+            width: 350px;
+            height: 350px;
+            bottom: 10%;
+            left: 5%;
+            background: #2ec5ce; /* Couleur 4 */
+        }
 
-.logo-icon {
-  position: relative;
-  width: 32px;
-  height: 32px;
-}
+        .overlay-blur {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px); /* Flou général de l'arrière-plan */
+            background-color: rgba(255, 255, 255, 0.2); /* Légère superposition blanche */
+        }
 
-.logo-color {
-  position: absolute;
-}
+        /* Styles de la Navbar */
+        /* Container nav-bar */
+        .nav-bar-container {
+            position: relative;
+            width: 100%;
+            height: 80px; /* Hauteur de la navbar */
+            z-index: 10; /* Assurez-vous qu'elle est au-dessus de tout */
+        }
 
-.color1 { width: 20.16px; height: 9.32px; top: 22.68px; left: 0.66px; background: #f22bb2; }
-.color2 { width: 9.32px; height: 23.01px; top: 0; left: 1.14px; background: #8c30f5; }
-.color3 { width: 20.16px; height: 9.32px; top: 0; left: 11.18px; background: #fe9a22; }
-.color4 { width: 9.32px; height: 23.01px; top: 8.44px; left: 22.03px; background: #2ec5ce; }
+        /* Navbar principale */
+        .nav-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px; /* Augmenté pour desktop */
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
 
-.logo-text {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #111827;
-}
+        /* Menu de navigation */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
 
-/* Liens de navigation */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
 
-.nav-item button {
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  color: #111827;
-  padding: 4px 8px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+        .logo-icon {
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
 
-/* Boutons stores */
-.btn-app {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+        .logo-color {
+            position: absolute;
+        }
 
-.store-btn a {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  padding: 4px 8px;
-  background-color: #000; /* Exemple, personnalise selon store */
-  color: #fff;
-  border-radius: 4px;
-  font-family: Inter, sans-serif;
-  font-size: 12px;
-  text-align: center;
-}
+        .color1 { width: 20.16px; height: 9.32px; top: 22.68px; left: 0.66px; background: #f22bb2; }
+        .color2 { width: 9.32px; height: 23.01px; top: 0; left: 1.14px; background: #8c30f5; }
+        .color3 { width: 20.16px; height: 9.32px; top: 0; left: 11.18px; background: #fe9a22; }
+        .color4 { width: 9.32px; height: 23.01px; top: 8.44px; left: 22.03px; background: #2ec5ce; }
 
-.store-btn a span.market-button-title {
-  font-weight: 600;
-  font-size: 14px;
-}
+        .logo-text {
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+            font-weight: 700; /* Plus de poids pour le texte du logo */
+            color: #111827;
+        }
+
+        /* Liens de navigation */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-item button {
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            color: #4b5563; /* Couleur de lien neutre */
+            padding: 8px 12px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+        .nav-item button:hover {
+            background-color: #f3f4f6;
+        }
+        
+        /* Boutons stores */
+        .btn-app {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .store-btn a {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            padding: 8px 12px; /* Augmenté */
+            background-color: #111827;
+            color: #fff;
+            border-radius: 8px; /* Plus arrondis */
+            font-family: Inter, sans-serif;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+        .store-btn a:hover {
+            background-color: #212c40;
+        }
+
+        .store-btn a span.market-button-subtitle {
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 1;
+            opacity: 0.8;
+        }
+
+        .store-btn a span.market-button-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1;
+        }
+        
+        /* Bouton Hamburger (caché par défaut sur desktop) */
+        .hamburger-menu {
+            display: none; 
+            font-size: 28px;
+            color: #111827;
+            cursor: pointer;
+            z-index: 1001; 
+            background: none;
+            border: none;
+            padding: 10px;
+            line-height: 1;
+        }
+
+        /* Styles de la section de contenu principal (Hero Content) */
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 40px; /* Padding ajusté pour laisser de l'espace à la navbar */
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-grow: 1; /* Permet au contenu de prendre de la place */
+            z-index: 5;
+        }
+
+        .text-section {
+            max-width: 500px;
+        }
+        
+        .heading {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+
+        .subheading {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #4b5563;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #8c30f5; /* Couleur de CTA */
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 4px 10px rgba(140, 48, 245, 0.4);
+        }
+        .cta-button:hover {
+            background-color: #7a28e0;
+            transform: translateY(-1px);
+        }
+        
+        /* Phone Section */
+        .phone-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 50px;
+            /* Animation légère pour le téléphone */
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .iphone-x {
+            position: relative;
+            width: 320px; 
+            height: 640px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 40px;
+        }
+
+        .iphone-x .frame {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            /* Utilisation d'une image SVG/Placeholder pour le cadre de téléphone */
+            content: '';
+            background-image: url('data:image/svg+xml;utf8,<svg width="320" height="640" viewBox="0 0 320 640" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="319" height="639" rx="39.5" fill="white" stroke="%231F2937" stroke-width="1"/><rect x="110" y="5" width="100" height="15" rx="7.5" fill="%231F2937"/></svg>');
+            background-size: cover;
+            z-index: 2;
+        }
+
+        .iphone-x .screen {
+            position: absolute;
+            top: 20px; /* Ajuster pour la bordure du téléphone */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px; /* Largeur de l'écran interne */
+            height: 600px; /* Hauteur de l'écran interne */
+            border-radius: 20px; 
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        /* Keyframes pour l'animation float */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Masquer les placeholders originaux de l'utilisateur */
+        .iphone-x img.frame { display: none; }
+        .iphone-x::after { /* Remplacement du frame par un style CSS/SVG plus simple et fiable */
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: 8px solid black;
+            border-radius: 40px;
+            box-sizing: border-box;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .iphone-x::before { /* Notch/Encoche */
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 20px;
+            background: black;
+            border-radius: 0 0 10px 10px;
+            z-index: 4;
+        }
+
+
+        /* ========================================================================= */
+        /* --- MEDIA QUERIES pour la Réactivité (Tablette et Téléphone) --- */
+        /* ========================================================================= */
+        
+        @media (max-width: 992px) {
+            
+            /* Navbar Responsiveness */
+            .nav-bar {
+                padding: 0 20px;
+                justify-content: space-between; /* Garder Logo à gauche, Hamburger à droite */
+            }
+
+            /* Masquer les éléments de navigation traditionnels */
+            .btn-app {
+                display: none; 
+            }
+            .nav-links {
+                display: none; 
+            }
+            
+            /* Afficher le bouton Hamburger */
+            .hamburger-menu {
+                display: block;
+            }
+            
+            /* Menu mobile plein écran */
+            .nav-menu {
+                position: fixed; 
+                top: 80px; 
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 80px);
+                flex-direction: column; 
+                align-items: center; 
+                padding: 40px 20px;
+                background-color: #fff;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+                z-index: 1000;
+                justify-content: flex-start;
+                gap: 30px; 
+                overflow-y: auto;
+            }
+            
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+            
+            /* Réafficher et styliser les liens dans le menu mobile */
+            .nav-menu .nav-links {
+                display: flex; 
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+            
+            .nav-menu .nav-item {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-menu .nav-item button {
+                width: 100%;
+                padding: 15px;
+                font-size: 16px;
+                font-weight: 700;
+                color: #111827;
+                background-color: #f3f4f6;
+            }
+
+            /* Hero Content Responsiveness */
+            .main-content {
+                flex-direction: column-reverse; /* Téléphone en haut, Texte en bas */
+                padding: 40px 20px;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .text-section {
+                max-width: 100%;
+            }
+            
+            .heading {
+                font-size: 32px; /* Réduction de la taille pour mobile */
+                margin-bottom: 15px;
+            }
+
+            .subheading {
+                font-size: 16px; /* Réduction de la taille */
+                margin-bottom: 25px;
+            }
+
+            .phone-section {
+                margin-left: 0;
+                /* Réduction de la taille du téléphone pour les petits écrans */
+                transform: scale(0.85); 
+                animation: none; /* Désactiver l'animation float sur mobile pour la performance */
+            }
+            
+            .iphone-x {
+                /* S'assurer qu'il ne dépasse pas la largeur de l'écran */
+                max-width: 90vw;
+            }
+            
+            .hero-section {
+                 /* Supprimer min-height si tout le contenu doit tenir */
+                min-height: auto; 
+            }
+            
+            .circle-purple { top: 10%; right: -50px; }
+            .circle-blue { bottom: 5%; left: -50px; }
+
+        }
+
+        /* Ajustements pour les très petits écrans (smartphones) */
+        @media (max-width: 640px) {
+            .nav-bar {
+                padding: 0 10px;
+            }
+            
+            .phone-section {
+                transform: scale(0.7);
+            }
+            
+            .iphone-x {
+                 /* Ajustement plus agressif pour les petits écrans */
+                width: 280px; 
+                height: 560px;
+            }
+            .iphone-x .screen {
+                width: 240px; 
+                height: 520px;
+            }
+            
+            .heading {
+                font-size: 28px;
+            }
+        }

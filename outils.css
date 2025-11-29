@@ -148,3 +148,37 @@
 
 .arrow-right div:nth-child(1) { top: 10px; left: 10.83px; }
 .arrow-right div:nth-child(2) { top: 5px; left: 10.83px; }
+
+/* --- Styles pour Tablette et Téléphone (moins de 992px) --- */
+@media (max-width: 992px) {
+    /* 1. Ajuster le padding général */
+    .outils-section {
+        padding: 60px 20px;
+    }
+
+    /* 2. Rendre le titre plus compact */
+    .title-container {
+        width: 100%;
+    }
+    .title-container h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    /* 3. Désactiver l'effet de zigzag et forcer le plein écran */
+    .cards-container {
+        flex-direction: column; /* Empiler les cartes */
+        gap: 40px; /* Augmenter l'espace entre les cartes empilées */
+    }
+
+    .card {
+        width: 100%; /* Les cartes prennent toute la largeur */
+        padding: 5%;
+    }
+
+    /* Désactiver la translation (zigzag) sur les écrans étroits */
+    .cards-container .card:nth-child(even),
+    .card3 {
+        transform: translateX(0);
+    }
+}
