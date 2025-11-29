@@ -1,215 +1,1089 @@
-/* Container global */
-.feature-container {
+:root {
+  --color-primary: #8c30f5;
+  /* Violet foncé pour l'accentuation */
+  --color-secondary: #2ec5ce;
+  /* Bleu cyan */
+  --color-background: #f7f7f7;
+  --color-text-dark: #111827;
+  --color-text-medium: #4b5563;
+  --color-success: #1DBF73;
+  /* Vert de validation */
+  --color-success-light: #CFF6CF;
+  --color-accent-blue: #2ec5ce;
+  /* Bleu pour la nouvelle section */
+  --color-accent-blue-light: #d8f5f8;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+/* --- STYLES GLOBALS ET TITRES DE SECTION --- */
+
+.section-padding {
+  padding: 80px 20px;
+}
+
+.features-summary-section,
+.value-proposition-section,
+.outils-section {
   width: 100%;
-  height: 480px;
-  position: relative;
+  box-sizing: border-box;
+}
+
+.features-summary-section {
+  background-color: var(--color-background);
+}
+
+.value-proposition-section {
+  background-color: #ffffff;
+}
+
+.outils-section {
+  background-color: var(--color-background);
+}
+
+/* Nouvelle section en fond gris */
+
+.feature-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
 }
 
 .feature-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  width: 100%;
 }
 
 /* TITRES */
 .title-container {
-  width: 56%;
+  max-width: 700px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
   text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .title-container h2 {
   font-size: 48px;
-  font-weight: 700;
-  color: #111827;
-  line-height: 60px;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  line-height: 1.2;
 }
 
 .title-container p {
   font-size: 18px;
-  color: #111827;
-  line-height: 28px;
+  color: var(--color-text-medium);
+  line-height: 1.6;
 }
 
-/* LISTE DE PROBLÈMES */
+/* --- STYLES CARTES PROBLÈMES --- */
+
 .problems {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 30px;
+  width: 100%;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* CARTES */
 .problem-card {
-  width: 384px;
-  border-radius: 8px;
+  flex: 1 1 300px;
+  min-width: 250px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-}
-
-/* ICONES — recréation des blocs colorés */
-.icon {
-  width: 32px;
-  height: 32px;
-  position: relative;
-      background: #9400d375;
-}
-
-/* Icon 1 */
-.icon-1::before,
-.icon-1::after,
-.icon-1 div {
-  content: "";
-  position: absolute;
-}
-
-.icon-1::before {
-  width: 9.33px;
-  height: 32px;
-  left: 0;
-  background: #7c3aed;
-}
-
-.icon-1::after {
-  width: 9.33px;
-  height: 32px;
-  left: 12px;
-  background: #1db5be;
-}
-
-.icon-1 div {
-  width: 8px;
-  height: 16px;
-  left: 24px;
-  top: 8px;
-  background: #c4b5fd;
-}
-
-/* Icon 2 */
-.icon-2::before,
-.icon-2::after,
-.icon-2 div {
-  content: "";
-  position: absolute;
-}
-
-.icon-2::before {
-  width: 29.33px;
-  height: 8px;
-  top: 1.33px;
-  left: 1.33px;
-  background: #7c3aed;
-}
-
-.icon-2::after {
-  width: 29.33px;
-  height: 8px;
-  top: 12px;
-  left: 1.33px;
-  background: #1db5be;
-}
-
-.icon-2 div {
-  width: 29.33px;
-  height: 8px;
-  top: 22.67px;
-  left: 1.33px;
-  background: #c4b5fd;
-}
-
-/* Icon 3 */
-.icon-3::before,
-.icon-3::after,
-.icon-3 div {
-  content: "";
-  position: absolute;
-}
-
-.icon-3::before {
-  width: 29.33px;
-  height: 6.67px;
-  top: 1.33px;
-  left: 1.33px;
-  background: #1db5be;
-}
-
-.icon-3::after {
-  width: 8px;
-  height: 20px;
-  top: 10.67px;
-  left: 1.33px;
-  background: #c4b5fd;
-}
-
-.icon-3 div {
-  width: 18.67px;
-  height: 20px;
-  top: 10.67px;
-  left: 12px;
-  background: #7c3aed;
-}
-
-/* TEXTES DES CARTES */
-.problem-text {
-  padding: 0 16px;
+  padding: 30px 20px;
   text-align: center;
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, margin-top 0.5s ease;
+  opacity: 0;
+  margin-top: 20px;
+}
+
+.problem-card.loaded {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.problem-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* ICONES (Remplacées par SVG) */
+.icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-primary);
 }
 
 .problem-text h3 {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
-  color: #111827;
-  line-height: 40px;
+  color: var(--color-text-dark);
+  line-height: 1.3;
+  margin-bottom: 5px;
 }
 
 .problem-text p {
   font-size: 16px;
-  color: #374151;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* --- STYLES TIMELINE DÉMARCHE --- */
+
+.value-proposition-section {
+  padding: 80px 20px;
+
+  margin: 0 auto;
+}
+
+.timeline {
+  margin: 50px auto;
+  position: relative;
+  max-width: 600px;
+  padding-left: 50px;
+}
+
+/* Ligne verticale de la timeline */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #e5e7eb;
+  z-index: 0;
+}
+
+.timeline-object {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ligne de progression des étapes complètes */
+.timeline-object.complete::after {
+  content: '';
+  display: block;
+  /* position: absolute; */
+  width: 4px;
+  background-color: var(--color-success);
+  left: 23px;
+  top: 50px;
+  height: calc(100% + 20px);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Cercle de statut */
+.timeline-status {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: 5px solid #fff;
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+/* Statut "Non Complété" */
+.timeline-object:not(.complete) .timeline-status {
+  background-color: #ffffff;
+  border: 5px solid var(--color-success);
+  box-shadow: none;
+}
+
+/* Icône de coche pour les étapes complètes (SVG) */
+.timeline-object.complete .timeline-status svg {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+/* Pour les étapes non complètes, on met l'icône de l'étape */
+.timeline-object:not(.complete) .timeline-status svg {
+  color: var(--color-success);
+  width: 20px;
+  height: 20px;
+}
+
+
+.timeline-content {
+  margin-left: 25px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  /* Style de carte plus marqué */
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--color-success);
+}
+
+.timeline-content h3 {
+  color: var(--color-success);
+  background: var(--color-success-light);
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.timeline-content span {
+  color: #4b5563;
+  /* Rendre le texte plus lisible */
+  font-size: 0.95em;
+  font-weight: 500;
+  display: block;
+}
+
+/* --- STYLES NOUVELLE SECTION OUTILS --- */
+.outils-section .title-container h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.outils-section .title-container p {
+  color: var(--color-text-medium);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 colonnes par défaut */
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.tool-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid var(--color-accent-blue);
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.tool-card .card-text {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.tool-card .card-text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text-dark);
+  margin-bottom: 8px;
+}
+
+.tool-card .card-text p {
+  font-size: 16px;
+  color: var(--color-text-medium);
+  line-height: 1.5;
+}
+
+.tool-icon {
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--color-accent-blue-light);
+  color: var(--color-accent-blue);
+  flex-shrink: 0;
+}
+
+.tool-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2;
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  /* Lien en violet */
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: var(--color-text-dark);
+}
+
+/* SVG de la flèche de lien */
+.card-link svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  /* Utilise la couleur du lien */
+  stroke-width: 2;
+}
+
+/* TITRES (Hiérarchie visuelle/-btning) */
+.title-container {
+  max-width: 800px;
+  /* Plus large pour les grands titres */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.title-container h2 {
+  font-size: 52px;
+  /* Taille augmentée pour l'impact marketing */
+  font-weight: 900;
+  /* Extra gras */
+  color: var(--color-text-dark);
+  line-height: 1.1;
+}
+
+/* Titre de la section de preuve sociale légèrement plus petit */
+.les-coiffeur-section .title-container h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.title-container p {
+  font-size: 20px;
+  /* Texte d'accroche plus visible */
+  color: var(--color-text-medium);
+  line-height: 1.6;
+}
+
+/* --- STYLES CARTES PROBLÈMES (Clarté et Accessibilité) --- */
+
+.problems {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* Assure que les cartes ont la même hauteur */
+  gap: 30px;
+  width: 100%;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.problem-card {
+  flex: 1 1 300px;
+  min-width: 280px;
+  border-radius: 16px;
+  /* Coins plus arrondis (UX) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 25px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.08);
+  /* Ombre plus moderne */
+  border: 1px solid #e2e8f0;
+  /* Petite bordure pour la définition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease, margin-top 0.5s ease;
+  opacity: 0;
+  margin-top: 20px;
+}
+
+.problem-card.loaded {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+  /* Plus d'effet de "lift" (UX) */
+  box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.15);
+}
+
+/* ICONES */
+.icon {
+  width: 56px;
+  /* Icônes plus grandes */
+  height: 56px;
+  color: var(--color-primary);
+  background-color: #f3e8ff;
+  /* Cercle de couleur claire derrière l'icône */
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.problem-text h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.problem-text p {
+  font-size: 17px;
+  color: var(--color-text-medium);
+  line-height: 1.6;
+}
+
+/* --- STYLES TIMELINE DÉMARCHE (Clarté et Processus) --- */
+
+.value-proposition-section {
+  padding: 96px 20px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.timeline {
+  margin: 60px auto;
+  position: relative;
+  max-width: 700px;
+  /* Élargissement pour la lisibilité */
+  padding-left: 60px;
+  /* Plus d'espace pour le marqueur */
+}
+
+/* Ligne verticale de la timeline */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  /* Position ajustée */
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #e5e7eb;
+  z-index: 0;
+}
+
+.timeline-object {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ligne de progression des étapes complètes */
+.timeline-object.complete::after {
+  content: '';
+  display: block;
+  width: 4px;
+  background-color: var(--color-success);
+  left: 28px;
+  top: 50px;
+  height: calc(100% + 20px);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Cercle de statut */
+.timeline-status {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: 6px solid #ffffff;
+  /* Bordure plus épaisse */
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+/* Statut "Non Complété" */
+.timeline-object:not(.complete) .timeline-status {
+  background-color: #ffffff;
+  border: 6px solid var(--color-success);
+  box-shadow: none;
+}
+
+/* Icône de coche pour les étapes complètes (SVG) */
+.timeline-object.complete .timeline-status svg {
+  color: #fff;
+  width: 22px;
+  height: 22px;
+}
+
+/* Pour les étapes non complètes, on met l'icône de l'étape */
+.timeline-object:not(.complete) .timeline-status svg {
+  color: var(--color-success);
+  width: 22px;
+  height: 22px;
+}
+
+.timeline-content {
+  margin-left: 30px;
+  width: 100%;
+  padding: 20px;
+  /* Plus de padding */
+  border-radius: 12px;
+  /* Coins arrondis */
+  background-color: #fff;
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid var(--color-success);
+  /* Bordure plus visible */
+}
+
+.timeline-content h3 {
+  color: var(--color-success);
+  background: var(--color-success-light);
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.timeline-content span {
+  color: var(--color-text-medium);
+  font-size: 1.05em;
+  font-weight: 500;
+  display: block;
+}
+
+/* --- STYLES SECTION COIFFEURS / GALERIE (Preuve Sociale et Engagement) --- */
+
+.flipgrid-wrapper {
+  max-width: 1000px;
+  /* Légèrement réduit pour les témoignages */
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.flipgrid-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 colonnes pour le contenu texte */
+  gap: 30px;
+  margin-bottom: 50px;
+  /* Espace avant le CTA */
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.coiffeur-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 4px solid var(--color-secondary);
+  /* Bordure d'accentuation */
+  flex-shrink: 0;
+}
+
+.coiffeur-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  margin-bottom: 25px;
+  /* Plus d'espace avant l'identité */
+}
+
+.name {
+  font-weight: 800;
+  color: var(--color-primary);
+  font-size: 17px;
+  /* margin-top: auto; Supprimé pour l'alignement avec le bouton */
+  margin-bottom: 5px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-text-medium);
+  margin-bottom: 20px;
+}
+
+/* NOUVEAU STYLE CTA DANS LA CARTE */
+.card-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f9ff;
+  /* Bleu très clair, moins dominant que le CTA principal */
+  color: var(--color-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #bae6fd;
+  margin-top: auto;
+  /* Pour pousser le bouton en bas de la carte */
+}
+
+.card-cta-button:hover {
+  background-color: #e0f2fe;
+  color: #0891b2;
+}
+
+.card-cta-button svg {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+
+/* CTA Styles (Clarté et Urgence Marketing - Bouton principal) */
+.cta-container {
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  /* Couleur secondaire pour le contraste maximal */
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 18px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 8px 20px -5px rgba(6, 182, 212, 0.5);
+  /* Ombre pour l'impact */
+}
+
+.cta-button:hover {
+  background-color: #0891b2;
+  /* Cyan un peu plus foncé */
+  transform: translateY(-2px);
+}
+
+/* --- STYLES FOOTER --- */
+
+.main-footer {
+  width: 100%;
+  background-color: #000;
+  color: #ffffff;
+  margin-top: 50px;
+  /* Espace après la dernière section */
+}
+
+/* Custom styles for app store buttons, replicating the provided look */
+.market-btn {
+  /* display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #111827;
+    color: #fff;
+    border-radius: 8px;
+    font-family: Inter, sans-serif;
+    text-align: left; */
+  /* transition: background-color 0.2s; */
+}
+
+.market-btn:hover {
+  background-color: #374151;
+  /* Equivalent à Gray-700 */
+}
+
+.market-button-subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  display: block;
+}
+
+.market-button-title {
+  font-size: 20px;
+  font-weight: 600;
   line-height: 24px;
+  display: block;
 }
-/* --- Styles pour Tablette (moins de 1200px) --- */
-@media (max-width: 1200px) {
-    .problems {
-        flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
-        justify-content: center;
-    }
-    .problem-card {
-        width: 45%; /* Deux cartes par ligne sur tablette */
-        margin-bottom: 20px;
-    }
-    .title-container {
-        width: 80%; /* Le titre prend plus de place sur l'écran */
-    }
+
+.market-btn svg {
+  margin-right: 12px;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
 
-/* --- Styles pour Téléphone (moins de 600px) --- */
-@media (max-width: 600px) {
-    .feature-content {
-        padding: 30px 10px; /* Réduire le padding général */
-    }
-    .title-container h2 {
-        font-size: 32px; /* Réduire la taille du titre */
-        line-height: 40px;
-    }
-    .title-container p {
-        font-size: 16px;
-    }
+/* MEDIA QUERIES pour la réactivité */
+@media (max-width: 1024px) {
+  .problems {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-    .problems {
-        flex-direction: column; /* Les cartes s'empilent */
-        gap: 20px;
-    }
-    .problem-card {
-        width: 90%; /* Chaque carte prend presque toute la largeur */
-    }
+  .problem-card {
+    flex: 1 1 calc(50% - 15px);
+    min-width: auto;
+    max-width: 450px;
+  }
+
+  .title-container h2 {
+    font-size: 44px;
+  }
+
+  .timeline {
+    padding-left: 40px;
+    margin: 50px auto;
+  }
+
+  .timeline::before,
+  .timeline-object.complete::after {
+    left: 20px;
+  }
+
+  .timeline-status {
+    height: 40px;
+    width: 40px;
+    border: 4px solid #ffffff;
+  }
+
+  /* Galerie / Testimonials */
+  .flipgrid-gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Footer */
+  .main-footer>div {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .footer-links-container,
+  .footer-app-links {
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .footer-link-group-1,
+  .footer-link-group-2 {
+    justify-content: center !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-padding {
+    padding: 60px 15px;
+  }
+
+  .title-container h2 {
+    font-size: 34px;
+    gap: 8px;
+  }
+
+  .title-container p {
+    font-size: 18px;
+  }
+
+  .problems {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .problem-card {
+    padding: 30px 20px;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline::before,
+  .timeline-object.complete::after {
+    left: 15px;
+  }
+
+  .timeline-status {
+    height: 36px;
+    width: 36px;
+    border: 3px solid #ffffff;
+  }
+
+  /* Galerie / Testimonials */
+  .flipgrid-gallery-container {
+    grid-template-columns: 1fr;
+    /* Une seule colonne sur mobile pour la lisibilité */
+    gap: 20px;
+  }
+
+  .cta-button {
+    font-size: 18px;
+    padding: 16px 30px;
+    width: 100%;
+    /* Full width on mobile */
+    max-width: 350px;
+  }
+
+  /* Footer Mobile */
+  .main-footer>div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .footer-app-links {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* MEDIA QUERIES pour la réactivité */
+@media (max-width: 1024px) {
+  .problems {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .problem-card {
+    flex: 1 1 calc(50% - 15px);
+    min-width: auto;
+    max-width: 450px;
+  }
+
+  .title-container h2 {
+    font-size: 44px;
+  }
+
+  .timeline {
+    padding-left: 40px;
+    margin: 50px auto;
+  }
+
+  .timeline::before,
+  .timeline-object.complete::after {
+    left: 20px;
+  }
+
+  .timeline-status {
+    height: 40px;
+    width: 40px;
+    border: 4px solid #ffffff;
+  }
+
+  /* Galerie / Testimonials */
+  .flipgrid-gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-padding {
+    padding: 60px 15px;
+  }
+
+  .title-container h2 {
+    font-size: 34px;
+    gap: 8px;
+  }
+
+  .title-container p {
+    font-size: 18px;
+  }
+
+  .problems {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .problem-card {
+    padding: 30px 20px;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline::before,
+  .timeline-object.complete::after {
+    left: 15px;
+  }
+
+  .timeline-status {
+    height: 36px;
+    width: 36px;
+    border: 3px solid #ffffff;
+  }
+
+  /* Galerie / Testimonials */
+  .flipgrid-gallery-container {
+    grid-template-columns: 1fr;
+    /* Une seule colonne sur mobile pour la lisibilité */
+    gap: 20px;
+  }
+
+  .cta-button {
+    font-size: 18px;
+    padding: 16px 30px;
+    width: 100%;
+    /* Full width on mobile */
+    max-width: 350px;
+  }
+}
+
+/* MEDIA QUERIES pour la réactivité */
+@media (max-width: 1024px) {
+  .problems {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .problem-card {
+    flex: 1 1 calc(50% - 15px);
+    min-width: auto;
+    max-width: 450px;
+  }
+
+  .title-container h2 {
+    font-size: 38px;
+  }
+
+  .timeline {
+    padding-left: 30px;
+    margin: 40px auto;
+  }
+
+  .timeline::before,
+  .timeline-object.complete::after {
+    left: 15px;
+  }
+
+  .timeline-status {
+    height: 36px;
+    width: 36px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    /* Une seule colonne sur tablette */
+    gap: 40px;
+  }
+
+  .tool-card {
+    border-left-width: 3px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .features-summary-section,
+  .value-proposition-section,
+  .outils-section {
+    padding: 40px 10px;
+  }
+
+  .title-container h2 {
+    font-size: 32px;
+  }
+
+  .problems {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .problem-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline::before,
+  .timeline-object.complete::after {
+    left: 10px;
+  }
+
+  .tool-card .card-text h3 {
+    font-size: 20px;
+  }
+
+  .tool-card .card-text p {
+    font-size: 15px;
+  }
 }

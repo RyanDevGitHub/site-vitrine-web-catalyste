@@ -1,62 +1,69 @@
-// console.clear();
+const hamburger = document.querySelector('.hamburger-menu');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-menu a'); const body = document.body;
 
-// gsap.registerPlugin(Flip);
+// Fonction pour basculer la classe 'active'
+function toggleMenu() {
+  navMenu.classList.toggle('active');
+  body.classList.toggle(' ');
+  // Change l'icône du hamburger en croix (X)
+  hamburger.innerHTML = navMenu.classList.contains('active') ? '&#10005;' : '&#9776;';
+}
 
-// const btnSmall = document.getElementById("flipgrid-btnS");
-// const btnLarge = document.getElementById("flipgrid-btnL");
-// const galleryContainer = document.querySelector(".flipgrid-gallery-container");
-// const items = gsap.utils.toArray(".flipgrid-gallery-item");
+// 1. Écoute l'événement de clic sur le bouton hamburger
+hamburger.addEventListener('click', toggleMenu);
 
-// btnSmall.addEventListener("click", () => {
-//   const state = Flip.getState(items);
-//   galleryContainer.classList.add("small");
-//   btnSmall.setAttribute("disabled", true);
-//   btnLarge.removeAttribute("disabled");
-//   Flip.from(state, {
-//     duration: 1,
-//     ease: "power1.inOut",
-//     absolute: true,
-//   });
-// });
+// 2. Ferme le menu lorsque l'utilisateur clique sur un lien (pour la navigation)
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // S'assurer que le menu n'est actif qu'en mode mobile
+    if (window.innerWidth <= 992) {
+      toggleMenu();
+    }
+  });
+});
 
-// btnLarge.addEventListener("click", () => {
-//   const state = Flip.getState(items);
-//   galleryContainer.classList.remove("small");
-//   btnSmall.removeAttribute("disabled");
-//   btnLarge.setAttribute("disabled", true);
-//   Flip.from(state, {
-//     duration: 1,
-//     ease: "power1.inOut",
-//     absolute: true,
-//   });
-// });
-  const hamburger = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.nav-menu');
-        const navLinks = document.querySelectorAll('.nav-menu a');
+// 3. Ferme le menu si la fenêtre est redimensionnée au-dessus de 992px
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 992 && navMenu.classList.contains('active')) {
+    toggleMenu();
+  }
+});
 
-        // Fonction pour basculer la classe 'active'
-        function toggleMenu() {
-            navMenu.classList.toggle('active');
-            // Change l'icône du hamburger en croix (X)
-            hamburger.innerHTML = navMenu.classList.contains('active') ? '&#10005;' : '&#9776;'; 
-        }
+document.addEventListener('DOMContentLoaded', () => {
+  const problemCards = document.querySelectorAll('.problem-card');
+  problemCards.forEach((card, index) => {
+    // Délai progressif pour un bel effet en cascade
+    setTimeout(() => {
+      card.classList.add('loaded');
+    }, index * 100);
+  });
+});
 
-        // 1. Écoute l'événement de clic sur le bouton hamburger
-        hamburger.addEventListener('click', toggleMenu);
+document.addEventListener('DOMContentLoaded', () => {
+  const problemCards = document.querySelectorAll('.problem-card');
+  problemCards.forEach((card, index) => {
+    // Délai progressif pour un bel effet en cascade
+    setTimeout(() => {
+      card.classList.add('loaded');
+    }, index * 100);
+  });
 
-        // 2. Ferme le menu lorsque l'utilisateur clique sur un lien (pour la navigation)
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // S'assurer que le menu n'est actif qu'en mode mobile
-                if (window.innerWidth <= 992) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // 3. Ferme le menu si la fenêtre est redimensionnée au-dessus de 992px
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 992 && navMenu.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
+  const toolCards = document.querySelectorAll('.tool-card');
+  toolCards.forEach((card, index) => {
+    // Délai progressif pour animer les cartes d'outils
+    setTimeout(() => {
+      card.style.opacity = '1';
+      card.style.marginTop = '0';
+    }, 300 + index * 150); // Commence après l'animation des problèmes
+  });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const problemCards = document.querySelectorAll('.problem-card');
+  problemCards.forEach((card, index) => {
+    // Délai progressif pour un bel effet en cascade
+    setTimeout(() => {
+      card.classList.add('loaded');
+    }, index * 150);
+  });
+});

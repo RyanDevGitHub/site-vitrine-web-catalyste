@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WebCatalyste - Landing Page Responsive</title>
-  <!-- <link rel="stylesheet" href="styles.css" /> -->
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="nav-bar.css" />
   <!-- <link rel="stylesheet" href="main-content-hero.css" />  -->
   <!-- <link rel="stylesheet" href="background-img.css" /> -->
-  <!-- <link rel="stylesheet" href="features.css" />
-  <link rel="stylesheet" href="demarche-ingenieure.css" />
-  <link rel="stylesheet" href="outils.css" />
-  <link rel="stylesheet" href="coiffeur-qui-nous-font-confiance.css" /> -->
+  <link rel="stylesheet" href="features.css" />
+  <!-- <link rel="stylesheet" href="demarche-ingenieure.css" /> -->
+  <!-- <link rel="stylesheet" href="outils.css" /> -->
+  <!-- <link rel="stylesheet" href="coiffeur-qui-nous-font-confiance.css" /> -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -61,19 +61,27 @@
                 <a href="#section-confiance"><button>Ce qui nous font confiance</button></a>
               </div>
             </div>
+            <div class="btn-app store-btn">
+              <!-- Bouton Google Play (Thème clair standard) -->
+              <a href="https://votre-lien-google.com" target="_blank" class="market-btn google-btn" role="button">
+
+                <!-- Amélioration Marketing: CTA très clair -->
+                <span class="market-button-subtitle">Télécharger sur</span>
+                <span class="market-button-title">Google Play</span>
+              </a>
+
+              <!-- Bouton App Store (Thème sombre pour le Branding et le Contraste) -->
+              <a href="https://votre-lien-apple.com" target="_blank" class="market-btn apple-btn market-btn-dark"
+                role="button">
+
+                <!-- Amélioration Marketing: CTA très clair -->
+                <span class="market-button-subtitle">Télécharger sur</span>
+                <span class="market-button-title">App Store</span>
+              </a>
+            </div>
           </div>
 
-          <div class="btn-app store-btn">
-            <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn google-btn" role="button">
-              <span class="market-button-subtitle">Télécharger sur</span>
-              <span class="market-button-title">Google Play</span>
-            </a>
 
-            <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn apple-btn" role="button">
-              <span class="market-button-subtitle">Télécharger sur</span>
-              <span class="market-button-title">App Store</span>
-            </a>
-          </div>
 
           <!-- Bouton Hamburger (Visible sur Mobile/Tablette) -->
           <button class="hamburger-menu" aria-label="Ouvrir le menu">
@@ -106,419 +114,449 @@
         <div class="phone-section">
           <div class="iphone-x">
             <!-- Utilisation du placeholder pour l'écran -->
-            <img class="screen" src="https://placehold.co/280x600/f8f8f8/111827?text=Application+Screen"
-              alt="Screen App Demo"
+            <img class="screen" src="/Capture_decran_2025-11-29_a_18.23.48.png" alt="Screen App Demo"
               onerror="this.onerror=null; this.src='https://placehold.co/280x600/f8f8f8/111827?text=Application+Screen';" />
+
+
             <!-- Le frame est stylisé en CSS, l'image d'origine est masquée -->
           </div>
         </div>
       </div>
     </section>
 
-    <section class="features-summary-section" id="section-problemes">
+    <section class="features-summary-section section-padding" id="section-problemes">
       <div class="feature-container">
         <div class="feature-content">
           <div class="title-container">
-            <h2>Problèmes qu’on résout</h2>
-            <p>Ce que les salons du 95 nous ont confié</p>
+            <h2>Nous avons cerné les 3 freins majeurs à votre croissance</h2>
+            <p>Ce que les salons du 95 nous ont confié, c'est que ces problèmes sont récurrents et empêchent
+              l'épanouissement professionnel.</p>
           </div>
 
           <div class="problems">
-            <!-- Carte 1 -->
+            <!-- Carte 1 : Ego / Valorisation -->
             <div class="problem-card">
-              <div class="icon icon-1"></div>
+              <!-- Icône de Couronne (prestige/valorisation) -->
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-crown">
+                  <path d="m21 5-1.44 1.44a1 1 0 0 1-.77.29H5.21a1 1 0 0 1-.77-.29L3 5" />
+                  <path d="M12 19.4V14.5" />
+                  <path d="M15 15.5l1 1.95" />
+                  <path d="M9 15.5l-1 1.95" />
+                  <path d="M12 14.5l-1-1.95l1.5-3.5l1.5 3.5l-1 1.95Z" />
+                </svg>
+              </div>
               <div class="problem-text">
-                <h3>Ego</h3>
-                <p>Manque de valorisation et reconnaissance</p>
+                <h3>Valorisation et Prestige</h3>
+                <p>Les coiffeurs se sentent dévalorisés par le manque de reconnaissance et la banalisation de leur
+                  expertise.</p>
               </div>
             </div>
 
-            <!-- Carte 2 -->
+            <!-- Carte 2 : Rendement / Optimisation -->
             <div class="problem-card">
-              <div class="icon icon-2"></div>
+              <!-- Icône de Vitesse/Cadran (efficacité/temps) -->
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-gauge">
+                  <path d="m12 14.5 4-4" />
+                  <path d="M14.5 12h-4" />
+                  <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z" />
+                  <path d="M12 6V2" />
+                  <path d="m18.5 7.5-.75.75" />
+                  <path d="m19.25 12h-4.25" />
+                  <path d="m18.5 16.5-.75-.75" />
+                  <path d="M12 18v-4" />
+                  <path d="m7.5 16.5.75-.75" />
+                  <path d="M6 12h4.25" />
+                  <path d="m7.5 7.5.75.75" />
+                </svg>
+              </div>
               <div class="problem-text">
-                <h3>Rendement</h3>
-                <p>Difficulté à optimiser le planning et le temps</p>
+                <h3>Gestion du Temps et Rentabilité</h3>
+                <p>Difficulté à optimiser les plannings et les services, menant à une perte de rentabilité sur chaque
+                  fauteuil.</p>
               </div>
             </div>
 
-            <!-- Carte 3 -->
+            <!-- Carte 3 : Mise en valeur / Image -->
             <div class="problem-card">
-              <div class="icon icon-3"></div>
+              <!-- Icône d'Écran/Galerie (présence en ligne/image) -->
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-monitor">
+                  <rect width="20" height="14" x="2" y="3" rx="2" />
+                  <line x1="12" x2="12" y1="17" y2="21" />
+                  <line x1="8" x2="16" y1="21" y2="21" />
+                </svg>
+              </div>
               <div class="problem-text">
-                <h3>Mise en valeur</h3>
-                <p>Pas toujours l’image qu’ils méritent en ligne</p>
+                <h3>Image et Visibilité Numérique</h3>
+                <p>L'image en ligne des salons ne reflète pas toujours la qualité de leur travail, freinant
+                  l'acquisition de nouveaux clients.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="value-proposition-section" id="section-demarche">
+    <section class="value-proposition-section section-padding" id="section-demarche">
       <div class="title-container">
-        <h2>Notre démarche d’ingénieurs</h2>
-        <p>Pas une équipe commerciale. Des ingénieurs qui co-construisent.</p>
+        <h2>Notre démarche : des ingénieurs, pas des commerciaux.</h2>
+        <p>Nous co-construisons une solution basée sur la réalité terrain, garantissant que l'outil réponde à **vos**
+          besoins, et non l'inverse.</p>
       </div>
       <div class="timeline">
+        <!-- Étape 1 : Écoute et Analyse (Complète) -->
         <div class="timeline-object complete">
-          <div class="timeline-status"></div>
+          <div class="timeline-status">
+            <!-- Check mark SVG pour les étapes complètes -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-check">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
           <div class="timeline-content">
-            <h3>Début de la formation</h3>
-            <span>19.06.2020</span>
+            <h3>Écoute et Analyse Approfondie</h3>
+            <span>Phase 1: Rencontres avec 15+ salons du Val d'Oise</span>
           </div>
         </div>
 
+        <!-- Étape 2 : Prototype et Validation (Complète) -->
         <div class="timeline-object complete">
-          <div class="timeline-status"></div>
+          <div class="timeline-status">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-check">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
           <div class="timeline-content">
-            <h3>Projet final</h3>
-            <span>05.07.2020</span>
+            <h3>Prototype et Validation</h3>
+            <span>Phase 2: Développement d'un MVP testé sur 3 salons pilotes</span>
           </div>
         </div>
 
+        <!-- Étape 3 : Déploiement Co-Construit (En cours/Prochaine étape) -->
         <div class="timeline-object">
-          <div class="timeline-status"></div>
+          <div class="timeline-status">
+            <!-- Icône d'Étoile pour la phase à venir -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-star">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
           <div class="timeline-content">
-            <h3>Remise de diplômes</h3>
-            <span>17.09.2020</span>
+            <h3>Déploiement Co-Construit</h3>
+            <span>Phase 3: Lancement public et intégration continue des retours clients</span>
           </div>
         </div>
       </div>
     </section>
-    <section class="outils-section" id="section-construction">
-      <div class="outils-content">
-        <!-- TITRE -->
-        <div class="title-container">
-          <h2>Un outil conçu autour de vos problèmes — et non l’inverse.</h2>
-          <p>Ce que les salons du 95 nous ont confié</p>
-        </div>
-
-        <!-- CARTES -->
-        <div class="cards-container">
-          <!-- Carte 1 -->
-          <div class="card">
-            <div class="icon icon-1"></div>
-            <div class="card-text">
-              <h3>Résolution de souffrances identifiées</h3>
-              <p>
-                Lorem ipsum dolor amet, consectetur adipiscing elit. Mattis et
-                sed nam sem tellus erat.
-              </p>
-            </div>
-            <div class="card-link">
-              <span>Explore</span>
-              <div class="arrow-right">
-                <div></div>
-                <div></div>
-              </div>
-            </div>
+    <section class="outils-section section-padding" id="section-construction">
+      <div class="feature-container">
+        <div class="feature-content">
+          <!-- TITRE -->
+          <div class="title-container">
+            <h2>Un outil conçu autour de vos problèmes — et non l’inverse.</h2>
+            <!-- Le sous-titre doit être différent ou plus pertinent -->
+            <p>Découvrez comment nos fonctionnalités ciblent l’Ego, le Rendement et la Mise en valeur.</p>
           </div>
 
-          <!-- Carte 2 -->
-          <div class="card">
-            <div class="icon icon-2"></div>
-            <div class="card-text">
-              <h3>Tests rapides avec les activité</h3>
-              <p>
-                Lorem ipsum dolor amet, consectetur adipiscing elit. Mattis et
-                sed nam sem tellus erat.
-              </p>
-            </div>
-            <div class="card-link">
-              <span>Explore</span>
-              <div class="arrow-right">
-                <div></div>
-                <div></div>
+          <!-- CARTES (Utilisation de la grille pour une structure 2 colonnes responsive) -->
+          <div class="cards-container">
+            <!-- Carte 1 : Cible l'Ego/Valorisation -->
+            <div class="tool-card" style="opacity: 0; margin-top: 20px;">
+              <div class="tool-icon">
+                <!-- Icône de Trophée ou Récompense -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-trophy">
+                  <path d="M6 9H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1Z" />
+                  <path d="M18 9h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1Z" />
+                  <path d="M12 15V4" />
+                  <path
+                    d="M18.8 13.48c-1.33 2-3.23 3.65-5.45 4.54a5 5 0 0 1-6.7 0c-2.22-.89-4.12-2.54-5.45-4.54C-.3 11.44-.9 8.65 1.5 8.5c2.4-.15 4.8 1.45 6.4 2.95 1.6-1.5 4-3.1 6.4-2.95 2.4.15 3 2.94.8 4.98L12 17l-3.3-2.52" />
+                </svg>
+              </div>
+              <div class="card-text">
+                <h3>Dashboard de Performance Personnalisé</h3>
+                <p>
+                  Chaque coiffeur voit ses statistiques de service, ses notes et ses objectifs mis en avant. Répond au
+                  besoin d'Ego et de reconnaissance professionnelle.
+                </p>
+              </div>
+              <div class="card-link">
+                <span>Explorer le détail</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-arrow-right">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
               </div>
             </div>
-          </div>
 
-          <!-- Carte 3 -->
-          <div class="card card3">
-            <div class="icon icon-3"></div>
-            <div class="card-text">
-              <h3>Compréhension du métier</h3>
-              <p>
-                Lorem ipsum dolor amet, consectetur adipiscing elit. Mattis et
-                sed nam sem tellus erat.
-              </p>
-            </div>
-            <div class="card-link">
-              <span>Explore</span>
-              <div class="arrow-right">
-                <div></div>
-                <div></div>
+            <!-- Carte 2 : Cible le Rendement/Optimisation -->
+            <div class="tool-card" style="opacity: 0; margin-top: 20px;">
+              <div class="tool-icon">
+                <!-- Icône de Calendrier/Planification -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-calendar-check">
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                  <line x1="16" x2="16" y1="2" y2="6" />
+                  <line x1="8" x2="8" y1="2" y2="6" />
+                  <line x1="3" x2="21" y1="10" y2="10" />
+                  <path d="m9 16 2 2 4-4" />
+                </svg>
+              </div>
+              <div class="card-text">
+                <h3>Système de Planning Dynamique</h3>
+                <p>
+                  Optimisation des durées de service et des transitions entre clients. Réduit les temps morts et
+                  augmente la capacité d'accueil journalière.
+                </p>
+              </div>
+              <div class="card-link">
+                <span>Explorer le détail</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-arrow-right">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
               </div>
             </div>
+
+            <!-- Carte 3 : Cible la Mise en Valeur/Image -->
+            <div class="tool-card" style="opacity: 0; margin-top: 20px;">
+              <div class="tool-icon">
+                <!-- Icône de Photos/Galerie -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-camera">
+                  <path
+                    d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" />
+                  <circle cx="12" cy="13" r="3" />
+                </svg>
+              </div>
+              <div class="card-text">
+                <h3>Galerie Client Intégrée</h3>
+                <p>
+                  Outil de capture simple pour valoriser les réalisations directement dans la fiche client, facilitant
+                  le partage et la promotion de l'expertise en ligne.
+                </p>
+              </div>
+              <div class="card-link">
+                <span>Explorer le détail</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-arrow-right">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Carte 4 (Optionnelle) : Cible la communication/fidélisation (pour remplir la grille) -->
+            <div class="tool-card" style="opacity: 0; margin-top: 20px;">
+              <div class="tool-icon">
+                <!-- Icône de Chat/Message -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-messages-square">
+                  <path d="M14 17h-4" />
+                  <path d="M16 13h-8" />
+                  <path d="M16 9h-8" />
+                  <path d="m10 13-2 2-2-2" />
+                  <path d="M22 17c0 1.7-.8 3-2 3H5a2 2 0 0 1-2-2V7c0-1.7.8-3 2-3h14a2 2 0 0 1 2 2v9Z" />
+                </svg>
+              </div>
+              <div class="card-text">
+                <h3>Outil de Rappel Client Intelligent</h3>
+                <p>
+                  Messages automatiques personnalisés basés sur l'historique et les préférences du client, optimisant la
+                  fidélisation et le retour en salon.
+                </p>
+              </div>
+              <div class="card-link">
+                <span>Explorer le détail</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-arrow-right">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
-
-    <section class="les-coiffeur-section" id="section-confiance">
+    <section class="les-coiffeur-section section-padding" id="section-confiance">
       <div class="title-container">
-        <h2>Un outil conçu autour de vos problèmes — et non l’inverse.</h2>
-        <p>Ce que les salons du 95 nous ont confié</p>
+        <h2>Leurs Témoignages, Leur Succès.</h2>
+        <p>Découvrez comment notre solution redonne du temps et de la sérénité aux coiffeurs les plus exigeants.</p>
       </div>
-      <!-- 
-        <div class="flipgrid-selector">
-          <button id="flipgrid-btnS">Small</button>
-          <button id="flipgrid-btnL" disabled>Large</button>
-        </div> -->
 
       <div class="flipgrid-wrapper">
         <div class="flipgrid-gallery-container">
-          <div class="flipgrid-gallery-item">
-            <div class="flipgrid-image-container">
-              <img src="https://assets.codepen.io/16327/portrait-image-1.jpg" alt="" />
+
+          <!-- CARTE TÉMOIGNAGE 1 : Rentabilité / Gestion -->
+          <div class="testimonial-card">
+            <div class="coiffeur-photo">
+              <!-- Placeholder d'image de coiffeur -->
+              <img src="https://placehold.co/100x100/7c3aed/ffffff?text=JM" alt="Photo de Julie, Salon Étoile" />
             </div>
+            <p class="quote">"Depuis que j'utilise l'outil, je me concentre sur la création. La gestion est devenue un
+              non-sujet. J'ai gagné **30% en rentabilité** par mois."</p>
+            <span class="name">Julie M.</span>
+            <span class="title">Propriétaire - Salon L'Étoile</span>
+            <!-- CTA DANS LA CARTE -->
+            <a href="#" class="card-cta-button">
+              Voir la vitrine
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-external-link">
+                <path d="M15 3h6v6" />
+                <path d="M10 14 21 3" />
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              </svg>
+            </a>
           </div>
 
-          <!-- copie toutes les autres images en gardant les mêmes classes -->
-          <div class="flipgrid-gallery-item">
-            <div class="flipgrid-image-container">
-              <img src="https://assets.codepen.io/16327/portrait-image-2.jpg" alt="" />
+          <!-- CARTE TÉMOIGNAGE 2 : Image / Expertise -->
+          <div class="testimonial-card">
+            <div class="coiffeur-photo">
+              <!-- Placeholder d'image de coiffeur -->
+              <img src="https://placehold.co/100x100/06b6d4/ffffff?text=MT" alt="Photo de Marc, L'Atelier du Style" />
             </div>
+            <p class="quote">"Enfin une solution qui met en avant mon expertise technique ! Le côté 'vitrine' a **doublé
+              mes prises de rendez-vous** pour les services complexes."</p>
+            <span class="name">Marc T.</span>
+            <span class="title">Expert Coloriste</span>
+            <!-- CTA DANS LA CARTE -->
+            <a href="#" class="card-cta-button">
+              Voir la vitrine
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-external-link">
+                <path d="M15 3h6v6" />
+                <path d="M10 14 21 3" />
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              </svg>
+            </a>
           </div>
 
-          <!-- ... etc ... -->
-          <div class="flipgrid-gallery-item">
-            <div class="flipgrid-image-container">
-              <img src="https://assets.codepen.io/16327/portrait-image-2.jpg" alt="" />
+          <!-- CARTE TÉMOIGNAGE 3 : Fidélisation / No-Show -->
+          <div class="testimonial-card">
+            <div class="coiffeur-photo">
+              <!-- Placeholder d'image de coiffeur -->
+              <img src="https://placehold.co/100x100/7c3aed/ffffff?text=SB" alt="Photo de Sarah, Le Tissage" />
             </div>
+            <p class="quote">"Le suivi client est précis et humain. J'ai réduit mes **no-shows à presque zéro** et j'ai
+              une meilleure relation avec ma clientèle fidèle."</p>
+            <span class="name">Sarah B.</span>
+            <span class="title">Manager - Le Tissage</span>
+            <!-- CTA DANS LA CARTE -->
+            <a href="#" class="card-cta-button">
+              Voir la vitrine
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-external-link">
+                <path d="M15 3h6v6" />
+                <path d="M10 14 21 3" />
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              </svg>
+            </a>
           </div>
-          <div class="flipgrid-gallery-item">
-            <div class="flipgrid-image-container">
-              <img src="https://assets.codepen.io/16327/portrait-image-2.jpg" alt="" />
-            </div>
-          </div>
-          <div class="flipgrid-gallery-item">
-            <div class="flipgrid-image-container">
-              <img src="https://assets.codepen.io/16327/portrait-image-2.jpg" alt="" />
-            </div>
-          </div>
-          <div class="flipgrid-gallery-item">
-            <div class="flipgrid-image-container">
-              <img src="https://assets.codepen.io/16327/portrait-image-2.jpg" alt="" />
-            </div>
-          </div>
-          <div class="flipgrid-gallery-item">
-            <div class="flipgrid-image-container">
-              <img src="https://assets.codepen.io/16327/portrait-image-2.jpg" alt="" />
-            </div>
-          </div>
+        </div>
+
+        <!-- CONTENEUR DU CTA GÉNÉRAL (Call-to-Action) -->
+        <div class="cta-container">
+          <a href="#" class="cta-button">
+            Voir toutes les vitrines de nos coiffeurs partenaires
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <div data-breakpoint="Desktop" style="
-          width: 100%;
-          padding-left: 112px;
-          padding-right: 112px;
-          padding-top: 64px;
-          padding-bottom: 64px;
-          background: black;
-          justify-content: space-between;
-          align-items: flex-start;
-          display: inline-flex;
-        ">
-      <div style="
-            overflow: hidden;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 24px;
-            display: inline-flex;
-          ">
-        <div data-color="Default" style="width: 32px; height: 32px; position: relative">
-          <div style="
-                width: 32px;
-                height: 32px;
-                left: 0px;
-                top: 0px;
-                position: absolute;
-                overflow: hidden;
-              ">
-            <div style="
-                  width: 20.16px;
-                  height: 9.32px;
-                  left: 0.66px;
-                  top: 22.69px;
-                  position: absolute;
-                  background: #f22bb2;
-                "></div>
-            <div style="
-                  width: 9.32px;
-                  height: 23.01px;
-                  left: 1.14px;
-                  top: 0px;
-                  position: absolute;
-                  background: #8c30f5;
-                "></div>
-            <div style="
-                  width: 20.16px;
-                  height: 9.32px;
-                  left: 11.18px;
-                  top: 0px;
-                  position: absolute;
-                  background: #fe9a22;
-                "></div>
-            <div style="
-                  width: 9.32px;
-                  height: 23.01px;
-                  left: 22.03px;
-                  top: 8.44px;
-                  position: absolute;
-                  background: #2ec5ce;
-                "></div>
+    <!-- Conteneur principal du footer (Desktop/Mobile responsive) -->
+    <div class="max-w-7xl mx-auto py-16 px-4 md:px-8 lg:px-5 flex flex-col md:flex-row justify-between items-start">
+
+      <!-- Colonne de gauche: Logo, Liens et Copyright -->
+      <div class="flex flex-col gap-6 md:gap-8 footer-links-container">
+
+        <!-- Logo (reconstruit en SVG/Div pour la légèreté) -->
+        <div class="w-8 h-8 relative">
+          <!-- J'utilise un logo générique SVG pour la compatibilité avec Tailwind -->
+          <div class="logo-icon">
+            <!-- Logo Colors -->
+            <div class="logo-color color1"></div>
+            <div class="logo-color color2"></div>
+            <div class="logo-color color3"></div>
+            <div class="logo-color color4"></div>
           </div>
         </div>
-        <div style="
-              overflow: hidden;
-              flex-direction: column;
-              justify-content: flex-start;
-              align-items: flex-start;
-              gap: 12px;
-              display: flex;
-            ">
-          <div style="
-                overflow: hidden;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 24px;
-                display: inline-flex;
-              ">
-            <div style="
-                  color: white;
-                  font-size: 16px;
-                  font-family: Inter;
-                  font-weight: 400;
-                  line-height: 24px;
-                  word-wrap: break-word;
-                ">
-              Download Now
-            </div>
-            <div style="
-                  color: white;
-                  font-size: 16px;
-                  font-family: Inter;
-                  font-weight: 400;
-                  line-height: 24px;
-                  word-wrap: break-word;
-                ">
-              License
-            </div>
+
+        <!-- Bloc de liens -->
+        <div class="flex flex-col gap-3">
+          <!-- Ligne 1 des liens -->
+          <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 lg:gap-8 footer-link-group-1">
+            <a href="#" class="text-white text-base font-normal leading-6 hover:text-indigo-400 transition">Télécharger
+              maintenant</a>
+            <a href="#" class="text-white text-base font-normal leading-6 hover:text-indigo-400 transition">Licence</a>
           </div>
-          <div style="
-                overflow: hidden;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 24px;
-                display: inline-flex;
-              ">
-            <div style="
-                  color: white;
-                  font-size: 16px;
-                  font-family: Inter;
-                  font-weight: 400;
-                  line-height: 24px;
-                  word-wrap: break-word;
-                ">
-              About
-            </div>
-            <div style="
-                  color: white;
-                  font-size: 16px;
-                  font-family: Inter;
-                  font-weight: 400;
-                  line-height: 24px;
-                  word-wrap: break-word;
-                ">
-              Features
-            </div>
-            <div style="
-                  color: white;
-                  font-size: 16px;
-                  font-family: Inter;
-                  font-weight: 400;
-                  line-height: 24px;
-                  word-wrap: break-word;
-                ">
-              Pricing
-            </div>
-            <div style="
-                  color: white;
-                  font-size: 16px;
-                  font-family: Inter;
-                  font-weight: 400;
-                  line-height: 24px;
-                  word-wrap: break-word;
-                ">
-              Careers
-            </div>
-            <div style="
-                  color: white;
-                  font-size: 16px;
-                  font-family: Inter;
-                  font-weight: 400;
-                  line-height: 24px;
-                  word-wrap: break-word;
-                ">
-              Help
-            </div>
-            <div style="
-                  color: white;
-                  font-size: 16px;
-                  font-family: Inter;
-                  font-weight: 400;
-                  line-height: 24px;
-                  word-wrap: break-word;
-                ">
-              Privacy Policy
-            </div>
+          <!-- Ligne 2 des liens -->
+          <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 lg:gap-8 footer-link-group-2">
+            <a href="#section-apropos"
+              class="text-white text-base font-normal leading-6 hover:text-indigo-400 transition">À propos</a>
+            <a href="#section-fonctionnalites"
+              class="text-white text-base font-normal leading-6 hover:text-indigo-400 transition">Fonctionnalités</a>
+            <a href="#section-tarifs"
+              class="text-white text-base font-normal leading-6 hover:text-indigo-400 transition">Tarifs</a>
+            <a href="#section-carrieres"
+              class="text-white text-base font-normal leading-6 hover:text-indigo-400 transition">Carrières</a>
+            <a href="#section-aide"
+              class="text-white text-base font-normal leading-6 hover:text-indigo-400 transition">Aide</a>
+            <a href="#section-confidentialite"
+              class="text-white text-base font-normal leading-6 hover:text-indigo-400 transition">Confidentialité</a>
           </div>
         </div>
-        <div style="
-              color: #d1d5db;
-              font-size: 14px;
-              font-family: Inter;
-              font-weight: 400;
-              line-height: 20px;
-              word-wrap: break-word;
-            ">
-          © 2021 Landify UI Kit. All rights reserved
+
+        <!-- Copyright -->
+        <div class="text-gray-400 text-sm font-normal leading-5 mt-4">
+          © 2024 Hair-Pro. Tous droits réservés.
         </div>
       </div>
-      <div style="
-            width: 176px;
-            overflow: hidden;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 16px;
-            display: inline-flex;
-          ">
-        <div style="
-              align-self: stretch;
-              color: #d1d5db;
-              font-size: 18px;
-              font-family: Inter;
-              font-weight: 500;
-              line-height: 28px;
-              word-wrap: break-word;
-            ">
-          Get the App
-        </div>
-        <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn google-btn" role="button">
-          <span class="market-button-subtitle">Download on the</span>
+
+      <!-- Colonne de droite: Boutons d'application -->
+      <div class="btn-app store-btn">
+        <!-- Bouton Google Play (Thème clair standard) -->
+        <a href="https://votre-lien-google.com" target="_blank" class="market-btn google-btn" role="button">
+
+          <!-- Amélioration Marketing: CTA très clair -->
+          <span class="market-button-subtitle">Télécharger sur</span>
           <span class="market-button-title">Google Play</span>
         </a>
-        <!-- Google Play Button -->
-        <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn apple-btn" role="button">
-          <span class="market-button-subtitle">Download on the</span>
+
+        <!-- Bouton App Store (Thème sombre pour le Branding et le Contraste) -->
+        <a href="https://votre-lien-apple.com" target="_blank" class="market-btn apple-btn market-btn-dark"
+          role="button">
+
+          <!-- Amélioration Marketing: CTA très clair -->
+          <span class="market-button-subtitle">Télécharger sur</span>
           <span class="market-button-title">App Store</span>
         </a>
       </div>

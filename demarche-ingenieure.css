@@ -1,63 +1,63 @@
-.value-proposition-section .title-container{
-   
+  .value-proposition-section .title-container{
+    
+      display: flex;
+      margin: auto;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .timeline{
+      margin:  10%;
+      position: relative;
+  }
+  .timeline-object {
     display: flex;
-    margin: auto;
-}
-* {
-  box-sizing: border-box;
-}
-.timeline{
-    margin:  10%;
+    align-items: center;
+    margin-top: 50px;
     position: relative;
-}
-.timeline-object {
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-  position: relative;
-}
-.timeline-object.complete::after {
-  content: '';
-  display: block;
-  position: absolute;
-  
-  width: 4px;
-  height: 100px;
-  background-color: #1DBF73;
-  
-  left: 23px;
-  top: 50px;
-  transform: translateX(-50%);
-}
-.timeline-status {
-  height: 46px;
-  width: 46px;
-  border-radius: 50%;
-  background-color: #1DBF73;
-}
-.timeline-object:not(.complete) .timeline-status {
-  background-color: #1DBF73
-}
-.timeline-content {
-  margin-left: 15px;
-      width: 100%;
-}
+  }
+  .timeline-object.complete::after {
+    content: '';
+    display: block;
+    position: absolute;
+    
+    width: 4px;
+    height: 100px;
+    background-color: #1DBF73;
+    
+    left: 23px;
+    top: 50px;
+    transform: translateX(-50%);
+  }
+  .timeline-status {
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    background-color: #1DBF73;
+  }
+  .timeline-object:not(.complete) .timeline-status {
+    background-color: #1DBF73
+  }
+  .timeline-content {
+    margin-left: 15px;
+        width: 100%;
+  }
 
-.timeline-content h3 {
-  color: #1DBF73;
-  background: #CFF6CF;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
+  .timeline-content h3 {
+    color: #1DBF73;
+    background: #CFF6CF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 
-.timeline-content span {
-  color: #103B27;
-  font-size: .9em;
-  font-weight: bold;
-}
+  .timeline-content span {
+    color: #103B27;
+    font-size: .9em;
+    font-weight: bold;
+  }
 
-.timeline-object:not(.complete) .timeline-content h3 {
-  color: #1DBF73;
-  background: #CFF6CF;
-}
+  .timeline-object:not(.complete) .timeline-content h3 {
+    color: #1DBF73;
+    background: #CFF6CF;
+  }
