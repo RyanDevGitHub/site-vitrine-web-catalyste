@@ -40,6 +40,7 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT}}
           script: |
             CONTAINER_NAME="site-vitrine-web-catalyste"
             IMAGE_NAME="ghcr.io/ryandevgithub/$CONTAINER_NAME:latest"
